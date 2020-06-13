@@ -3,22 +3,42 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Dearlership {
-    private static Object String;
 
     public static void main(String[] args) {
+        String name;
+        String  tyepOfTransaction;
+        String vehicleModel;
+        double totalMoney;
         System.out.println("Hi welcome to Ford car dealership!! what's your name?");
         Scanner sc = new Scanner(System.in);
-        String name = sc.nextLine();
+        name = sc.nextLine();
         System.out.println("How can I help you? Do you want to finance or cash?");
-        String  tyepOfTransaction = sc.nextLine();
+        tyepOfTransaction = sc.nextLine();
+        if(tyepOfTransaction.equals("finance")){
+            System.out.println("What is your credit score?");
+            int creditScore = sc.nextInt();
+
+        }
+        else{
+
+        }
         System.out.println("What kind of vehicle you like to buy?");
-        String vehicleModel = sc.nextLine();
+        vehicleModel = sc.nextLine();
         System.out.println("How much money you have?");
-        double totalMoney = sc.nextDouble();
+        totalMoney = sc.nextDouble();
         System.out.println("Your transaction is processing !!");
+        createCustomer();
+        System.out.println("Hurray !!, thanks for the purchase. ");
 
         
     }
+
+    public static void createCustomer(String name, String custAddress, double cashInHand, boolean finance, int creditScore){
+        Customer newCustomer = new Customer();
+
+    }
+
+
 
     public static void handleCustomer(Customer customer, boolean finance, Vehicle vehicle){
         if(customer.isFinance()) {
