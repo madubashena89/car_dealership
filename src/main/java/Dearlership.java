@@ -5,7 +5,7 @@ public class Dearlership {
     public static void main(String[] args) {
         //customer details
         String name;
-        String  tyepOfTransaction;
+        boolean  tyepOfTransaction;
         String address;
         double cashInHand;
         boolean finance;
@@ -25,13 +25,12 @@ public class Dearlership {
         year = sc.nextInt();
         System.out.println("What's the car price you saw online? ");
         price = sc.nextInt();
-        System.out.println("Do you want to finance or cash?");
-        tyepOfTransaction = sc.nextLine();
-        if(tyepOfTransaction.equalsIgnoreCase("finance")){
-            finance = true;
+        System.out.println("Do you want to finance or cash? (Just Type cash = true or false for finance) ");
+        tyepOfTransaction = sc.nextBoolean();
+        if(!tyepOfTransaction){
             System.out.println("What is your credit score?");
             int creditScore = sc.nextInt();
-            callEmployeeForHelp(name, address, 0.0, finance, creditScore, year, vehicleModel, price);
+            callEmployeeForHelp(name, address, 0.0, tyepOfTransaction, creditScore, year, vehicleModel, price);
             System.out.println("Your transaction is processing !!");
             System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle ");
 
