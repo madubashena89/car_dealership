@@ -6,14 +6,6 @@ public class Customer {
     private boolean finance;
     private int creditScore;
 
-    public Customer(String name, String customerID, String customerAddress, double cashInHand, boolean finance, int creditScore) {
-        this.name = name;
-        this.customerID = customerID;
-        this.customerAddress = customerAddress;
-        this.cashInHand = cashInHand;
-        this.finance = finance;
-        this.creditScore = creditScore;
-    }
 
     public int getCreditScore() {
         return creditScore;

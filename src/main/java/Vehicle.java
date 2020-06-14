@@ -1,25 +1,9 @@
 public class Vehicle {
-    private double engineCapacity;
     private int year;
     private String model;
     private int price;
 
     private int minimumDownPayment;
-
-    public Vehicle(double engineCapacity, int year, String model, int price) {
-        this.engineCapacity = engineCapacity;
-        this.year = year;
-        this.model = model;
-        this.price = price;
-    }
-
-    public double getEngineCapacity() {
-        return engineCapacity;
-    }
-
-    public void setEngineCapacity(double engineCapacity) {
-        this.engineCapacity = engineCapacity;
-    }
 
     public int getYear() {
         return year;
