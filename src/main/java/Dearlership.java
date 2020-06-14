@@ -30,9 +30,7 @@ public class Dearlership {
         if(!tyepOfTransaction){
             System.out.println("What is your credit score?");
             int creditScore = sc.nextInt();
-            callEmployeeForHelp(name, address, 0.0, tyepOfTransaction, creditScore, year, vehicleModel, price);
-            System.out.println("Your transaction is processing !!");
-            System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle ");
+            callEmployeeForHelp(name, address, 0.0, true, creditScore, year, vehicleModel, price);
 
         }
         else{

@@ -76,13 +76,17 @@ public class Employee {
 
     public static void handleCustomer(Customer customer, boolean finance, Vehicle vehicle){
         if(customer.isFinance()) {
+            System.out.println("Your transaction is processing !!");
             assignFinanceToTheBank(customer,vehicle);
+
         }
         else if(vehicle.getPrice() <= customer.getCashInHand()){
             processCashTransaction(customer, vehicle);
+            System.out.println("Your transaction is processing !!");
+            System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle ");
         }
         else {
-            System.out.println("Please bring this much money");
+            System.out.println("Please bring " + vehicle.getPrice() +  "money on next time");
         }
     }
 
@@ -90,12 +94,15 @@ public class Employee {
         double interestRate = 0.0;
         if(customer.getCreditScore() >= 720){
             interestRate = 0;
+            System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle and the interest rate is: " + interestRate*100 + "%");
         }else if(customer.getCreditScore() >= 650 && customer.getCreditScore() <720){
             interestRate = 0.05;
+            System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle and the interest rate is: " + interestRate*100 + "%");
         }else if(customer.getCreditScore() >= 550 && customer.getCreditScore() <650){
             interestRate = 0.15;
+            System.out.println("Hurray !!, thanks for the purchase. Here is your vehicle and the interest rate is: " + interestRate*100 + "%");
         }else {
-            System.out.println(customer +" is not eligible to buy the car");
+            System.out.println(customer.getName() +" is not eligible to buy the car at this time because of the credit score");
         }
         return interestRate;
     }
